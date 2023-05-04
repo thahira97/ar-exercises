@@ -18,3 +18,10 @@ for stores in @mens_stores
   puts "#{stores.name}"
   puts "#{stores.annual_revenue}"
 end
+
+@womens_stores = Store.where("womens_apparel = ? AND annual_revenue < ?", true, 1000000 )
+
+@womens_stores.each do |stores|
+  puts "womens stores: #{stores.name}"
+  puts "#{stores.annual_revenue}"
+end
